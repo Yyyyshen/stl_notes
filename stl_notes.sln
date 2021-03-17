@@ -5,6 +5,10 @@ VisualStudioVersion = 16.0.31112.23
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "stl_notes", "stl_notes\stl_notes.vcxproj", "{B1C5C8BD-A302-439A-8A4D-BEED66A68906}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "stl_source_code_analysis", "stl_source_code_analysis", "{AE1E8AA0-D404-4FEC-870A-599EE05DDB1D}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "stl_src_analysis_01", "stl_src_analysis_01\stl_src_analysis_01.vcxproj", "{54DFC239-8AC5-41EF-89B4-90A7465D2DFE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -21,9 +25,20 @@ Global
 		{B1C5C8BD-A302-439A-8A4D-BEED66A68906}.Release|x64.Build.0 = Release|x64
 		{B1C5C8BD-A302-439A-8A4D-BEED66A68906}.Release|x86.ActiveCfg = Release|Win32
 		{B1C5C8BD-A302-439A-8A4D-BEED66A68906}.Release|x86.Build.0 = Release|Win32
+		{54DFC239-8AC5-41EF-89B4-90A7465D2DFE}.Debug|x64.ActiveCfg = Debug|x64
+		{54DFC239-8AC5-41EF-89B4-90A7465D2DFE}.Debug|x64.Build.0 = Debug|x64
+		{54DFC239-8AC5-41EF-89B4-90A7465D2DFE}.Debug|x86.ActiveCfg = Debug|Win32
+		{54DFC239-8AC5-41EF-89B4-90A7465D2DFE}.Debug|x86.Build.0 = Debug|Win32
+		{54DFC239-8AC5-41EF-89B4-90A7465D2DFE}.Release|x64.ActiveCfg = Release|x64
+		{54DFC239-8AC5-41EF-89B4-90A7465D2DFE}.Release|x64.Build.0 = Release|x64
+		{54DFC239-8AC5-41EF-89B4-90A7465D2DFE}.Release|x86.ActiveCfg = Release|Win32
+		{54DFC239-8AC5-41EF-89B4-90A7465D2DFE}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{54DFC239-8AC5-41EF-89B4-90A7465D2DFE} = {AE1E8AA0-D404-4FEC-870A-599EE05DDB1D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {9ECAAA54-96C2-43E2-8A97-05C47913408B}
