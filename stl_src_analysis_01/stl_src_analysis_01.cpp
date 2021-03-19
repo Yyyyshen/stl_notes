@@ -44,10 +44,100 @@ void test_temp_obj() {
 	//print<int>()表示一个临时对象，而不是一个函数调用操作，for_each结束则对象生命周期结束
 	for_each(iv.begin(), iv.end(), print<int>());
 }
-//
+//静态常量整型成员在class内部直接初始化
+template <typename T>
+class integerClass {
+public:
+	static const int _datai = 5;
+	static const long _datal = 3L;
+	static const char _datac = 'a';
+};
+void testIntegerClass() {
+	cout << integerClass<int>::_datac << endl;
+}
+//操作符increment/decremenet/dereference
+//迭代器都需要实现前进(++)和取值(*)操作
+class INT {
+	friend ostream& operator<<(ostream& os, const INT& i);
+public:
+	INT(int i) :m_i(i) {};
+	//前置++，返回自增后的值
+	INT& operator++()
+	{
+		++(this->m_i);
+		return *this;
+	}
+	const INT operator++(int)
+	{
+		INT temp = *this;
+		++(*this);
+		return temp;//后置++，返回原值
+	}
+	//前后置--，同++
+	INT& operator--()
+	{
+		--(this->m_i);
+		return *this;
+	}
+	const INT operator--(int)
+	{
+		INT temp = *this;
+		--(*this);
+		return temp;
+	}
+	//dereference取值
+	int& operator*() const {
+		return (int&)m_i;
+	}
+private:
+	int m_i;
+};
+
+ostream& operator<<(ostream& os, const INT& i) {
+	os << '[' << i.m_i << ']';
+	return os;
+}
+
+void test_INT() {
+	INT I(5);
+	cout << I++;
+	cout << ++I;
+	cout << I--;
+	cout << --I;
+	cout << *I;
+}
+//前闭后开区间表示法
+//任何一个STL算法都需要获得由迭代器标示的区间[first,last)
+//last表示最后一个元素的下一个位置
+template <class InputIterator, class T>
+InputIterator my_find(InputIterator first, InputIterator last, const T& value)
+{
+	while (first != last && *first != value) ++first;
+	return first;
+}
+template<class InputIterator, class Function>
+Function my_for_each(InputIterator first, InputIterator last, Function f) {
+	for (; first != last; ++first)
+		f(*first);
+	return f;
+}
+//operator()重载
+template<class T>
+struct my_plus { 
+	//重载了()操作符，结构体形成了一个仿函数
+	T operator()(const T& x, const T& y) const { return x + y; }
+};
+void test_func_call() {
+	my_plus<int> plusobj;
+	cout << plusobj(3, 5) << endl;//仿函数
+	cout << my_plus<int>()/*临时对象*/(3, 5)/*调用*/ << endl;
+}
+
 
 int main()
 {
-	test_temp_obj();
+	//test_temp_obj();
+	//test_INT();
+	test_func_call();
 }
 
