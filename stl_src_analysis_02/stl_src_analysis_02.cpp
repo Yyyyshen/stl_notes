@@ -45,7 +45,7 @@ void test_y_alloc() {
  * 考虑多线程
  * 考虑内存不足时的应变措施
  * 考虑过多小型区块造成内存碎片问题
- * 
+ *
  * SIG设计了双层级配置器
  * 第一级使用了C的malloc()和free()，模拟set_new_handler处理内存不足情况
  * 第二级视情况采用不同策略，维护16个free lists，负责16种小型区块的次配置能力，使用了memory pool，内存不足时转用第一级配置器
@@ -59,6 +59,12 @@ public:
 	static void deallocate(T* p, size_t n) { if (0 != n)Alloc::deallocate(p, n * sizeof(T)); }
 	static void deallocate(T* p) { Alloc::deallocate(p, sizeof(T)); }
 };
+/**
+ * 详解两级配置器
+ * 见下面头文件中实现
+ */
+#include "y_malloc_1.h" 
+#include "y_malloc_2.h"
 
 int main()
 {
