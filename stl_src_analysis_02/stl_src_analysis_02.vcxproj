@@ -146,6 +146,7 @@
     <ClInclude Include="y_alloc.h" />
     <ClInclude Include="y_malloc_1.h" />
     <ClInclude Include="y_malloc_2.h" />
+    <ClInclude Include="y_uninitialized.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

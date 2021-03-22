@@ -65,6 +65,21 @@ public:
  */
 #include "y_malloc_1.h" 
 #include "y_malloc_2.h"
+void test_malloc_1_2() {
+	//
+}
+/**
+ * 内存基本处理工具
+ * STL定义五个全局函数，作用域未初始化空间
+ * 前两个函数是前面实现过的构造和析构construct()和destroy()
+ * 还有三个是uninitialized_copy()、uninitialized_fill()、uninitialized_fill_n()
+ * 分别对应于copy()、fill()、fill_n()
+ * 以下进行简单实现和理解
+ */
+#include "y_uninitialized.h"
+void test_uninitialized() {
+
+}
 
 int main()
 {

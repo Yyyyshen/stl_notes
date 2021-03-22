@@ -29,5 +29,8 @@
     <ClInclude Include="y_malloc_2.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="y_uninitialized.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
