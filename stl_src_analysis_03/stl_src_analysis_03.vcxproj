@@ -141,6 +141,10 @@
   <ItemGroup>
     <ClCompile Include="stl_src_analysis_03.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="y_list.h" />
+    <ClInclude Include="y_smart_ptr.h" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
