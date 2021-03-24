@@ -26,5 +26,8 @@
     <ClInclude Include="y_list.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="y_traits.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
