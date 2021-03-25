@@ -5,9 +5,45 @@
 
 /**
  * 序列式容器
+ * array(c++内建)
+ * vector
+ *  heap(算法形式呈现)
+ *   priority-queue
+ * list
+ * slist
+ * deque
+ *  stack (基于deque
+ *  queue  属于adapter)
+ *
+ * 序列式容器元素都ordered，但未必sorted
+ */
+
+using namespace std;
+
+/**
+ * vector
+ * 与array相似，差别在于空间可变性
+ * 重新配置空间的操作为：申请新空间、数据移动、释放旧空间
+ * 这个过程性能成本较高，所以不可能是每次新增元素时扩容
+ * 需要一个空间配置策略
+ * 参考SGI STL版本源码进行了解
+ */
+#include "y_vector.h"
+#include <vector>
+void test_vector() {
+	vector<int> iv(2, 9);
+	cout << "size:" << iv.size() << endl;//2
+	cout << "capacity:" << iv.capacity() << endl;//2
+	iv.push_back(1); //size3，cap4
+	iv.clear();
+	//size0,cap4
+}
+/**
+ * list
+ *
  */
 
 int main()
 {
-    std::cout << "Hello World!\n";
+	std::cout << "Hello World!\n";
 }
