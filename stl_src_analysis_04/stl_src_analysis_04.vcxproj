@@ -142,6 +142,7 @@
     <ClCompile Include="stl_src_analysis_04.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="y_list.h" />
     <ClInclude Include="y_vector.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

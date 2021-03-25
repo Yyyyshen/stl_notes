@@ -40,8 +40,14 @@ void test_vector() {
 }
 /**
  * list
- *
+ * 相比vector是连续线性空间，list会复杂一些
+ * 每次插入和删除一个元素，就配置或释放一个元素空间，没有空间浪费，并且时间效率都是O(1)
  */
+#include "y_list.h"
+#include<list>
+void test_list() {
+
+}
 
 int main()
 {
