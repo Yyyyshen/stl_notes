@@ -48,8 +48,20 @@ void test_vector() {
 void test_list() {
 
 }
+/**
+ * deque
+ * 双向开口连续线性空间
+ * 可在头尾两端做插入删除（vector技术上也实现了头部操作，但效率很差）
+ * 与vector另一个差异在于，没有容量概念，因为是动态地以分段连续空间组合而成，随时可以增加一段新空间并链接
+ * 可随机访问但迭代器并不是普通指针，复杂度高一些；所以，如果要排序deque可以先复制到vector进行排序再复制回来
+ */
+#include "y_deque.h"
+#include <deque>
+void test_deque() {
+	//确实复杂很多，见y_deque.h中实现
+}
 
 int main()
 {
-	std::cout << "Hello World!\n";
+	
 }
