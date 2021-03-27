@@ -32,5 +32,8 @@
     <ClInclude Include="y_stack_and_queue.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="y_heap.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
