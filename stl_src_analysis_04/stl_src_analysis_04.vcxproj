@@ -144,6 +144,7 @@
   <ItemGroup>
     <ClInclude Include="y_deque.h" />
     <ClInclude Include="y_list.h" />
+    <ClInclude Include="y_stack_and_queue.h" />
     <ClInclude Include="y_vector.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

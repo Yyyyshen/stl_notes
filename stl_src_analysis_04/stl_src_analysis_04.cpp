@@ -60,8 +60,18 @@ void test_list() {
 void test_deque() {
 	//确实复杂很多，见y_deque.h中实现
 }
+/**
+ * stack与queue
+ * 基于deque的数据结构，不属于容器，是适配器
+ */
+#include "y_stack_and_queue.h"
+void test_start_and_queue() {
+
+}
+
+
 
 int main()
 {
-	
+
 }
