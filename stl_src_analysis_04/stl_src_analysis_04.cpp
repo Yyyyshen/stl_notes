@@ -108,6 +108,26 @@ void test_heap() {
 		cout << ivec[i] << " ";
 	cout << endl;//得到一个排序好的递增序列
 }
+/**
+ * priority_queue
+ * 在上一节heap中提过，缺省条件下利用一个max-heap实现，而map-heap是基于容器vector表现的完全二叉树
+ * 满足权值高的先出（也就是使用pop_heap）
+ */
+#include <queue>
+void test_priority_queue() {
+	//见y_heap.h，写在一起了
+	int ia[9] = { 0,1,2,3,4,8,9,3,5 };
+	priority_queue<int> ipq(ia, ia + 9);
+	while (!ipq.empty())
+	{
+		cout << ipq.top() << " ";
+		ipq.pop();
+	}
+	cout << endl;
+}
+/**
+ * slist
+ */
 
 
 int main()
