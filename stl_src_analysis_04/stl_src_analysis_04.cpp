@@ -127,7 +127,13 @@ void test_priority_queue() {
 }
 /**
  * slist
+ * 单链表，并不在标准规格内，但可以作为技巧学习的例子
+ * 与list的主要差别在于，前者为单向迭代器，后者list为双向迭代器
  */
+#include "y_slist.h"
+void test_slist() {
+	
+}
 
 
 int main()
