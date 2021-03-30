@@ -202,6 +202,7 @@ protected:
 	static link_type maximum(link_type x) { return (link_type)__rb_tree_node_base::maximum(x); }
 public:
 	typedef __rb_tree_iterator<value_type, reference, pointer> iterator;//µü´úÆ÷³ö³¡
+	typedef __rb_tree_iterator<value_type, const reference, const pointer> const_iterator;
 private:
 	iterator __insert(base_ptr x, base_ptr y, const value_type& v);
 	link_type __copy(link_type x, link_type p);

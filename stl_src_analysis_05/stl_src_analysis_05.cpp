@@ -49,6 +49,16 @@ using namespace std;
 void test_rb_tree() {
 
 }
+/**
+ * set
+ * 所有元素根据键值自动排序，不同于map拥有实值和键值，set元素的键值就是实值，反之亦然，并且，不允许两个元素有相同键值
+ * 由于这个特性，不能通过迭代器修改set元素值，因为元素值就是键值，关系到set排序规则，迭代器选用了底层红黑树中的const_iterator，杜绝写入
+ * 开放的很多操作接口在红黑树中都提供了，基本就是一层封装
+ */
+#include "y_set.h"
+void test_set() {
+
+}
 
 
 int main()

@@ -23,5 +23,8 @@
     <ClInclude Include="y_rb_tree.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="y_set.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
