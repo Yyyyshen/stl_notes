@@ -141,6 +141,9 @@
   <ItemGroup>
     <ClCompile Include="stl_src_analysis_05.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="y_rb_tree.h" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
