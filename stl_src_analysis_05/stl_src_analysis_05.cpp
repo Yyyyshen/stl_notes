@@ -59,6 +59,13 @@ void test_rb_tree() {
 void test_set() {
 
 }
+/**
+ * map
+ */
+#include "y_map.h"
+void test_map() {
+	//除了元素使用pair，以及可以改变实值，与set相差不大
+}
 
 
 int main()
