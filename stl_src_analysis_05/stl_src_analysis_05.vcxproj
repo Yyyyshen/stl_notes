@@ -142,6 +142,9 @@
     <ClCompile Include="stl_src_analysis_05.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="y_hashmap.h" />
+    <ClInclude Include="y_hashmultiset_and_map.h" />
+    <ClInclude Include="y_hashset.h" />
     <ClInclude Include="y_hashtable.h" />
     <ClInclude Include="y_map.h" />
     <ClInclude Include="y_multimap.h" />

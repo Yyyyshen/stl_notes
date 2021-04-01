@@ -38,5 +38,14 @@
     <ClInclude Include="y_hashtable.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="y_hashset.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="y_hashmap.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="y_hashmultiset_and_map.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

@@ -93,6 +93,31 @@ void test_multimap() {
 void test_hashtable() {
 
 }
+/**
+ * hash_set
+ * 除了底层使用hashtable作为容器之外，使用与set相同
+ * 需注意的是由于红黑树可以自动排序，hash_set没有此功能
+ */
+#include "y_hashset.h"
+void test_hashset() {
+
+}
+/**
+ * hash_map
+ * 同理与hash_set，换了底层容器
+ */
+#include "y_hashmap.h"
+void test_hashmap() {
+
+}
+/**
+ * hash_multiset和hash_multimap
+ * 除了允许键值相同之外，与hashset和hashmap相同
+ */
+#include "y_hashmultiset_and_map.h"
+void test_hashmultiset_and_map() {
+	//后面随便看一眼就好，都是重复的东西
+}
 
 int main()
 {
