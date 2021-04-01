@@ -83,6 +83,16 @@ void test_multimap() {
 
 }
 
+/**
+ * hashtable
+ * 利用一个映射函数hash func，将元素映射为一个索引，以类似字典的形式来存储数据
+ * 其中，这个散列函数不可能完全将不同元素映射到不同位置，还是可能出现相同索引的
+ * 这就是所谓的碰撞，解决办法有线性探测、二次探测、开链等（算法课中了解过）
+ */
+#include "y_hashtable.h"
+void test_hashtable() {
+
+}
 
 int main()
 {
