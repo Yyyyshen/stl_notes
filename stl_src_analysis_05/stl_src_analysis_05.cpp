@@ -66,6 +66,22 @@ void test_set() {
 void test_map() {
 	//除了元素使用pair，以及可以改变实值，与set相差不大
 }
+/**
+ * multiset
+ * 特性和用法与set完全相同，唯一差别是允许键值重复
+ */
+#include "y_multiset.h"
+void test_multiset() {
+
+}
+/**
+ * multimap
+ * 同理multiset
+ */
+#include "y_multimap.h"
+void test_multimap() {
+
+}
 
 
 int main()
