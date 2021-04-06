@@ -68,9 +68,46 @@ void test_numeric() {
 		cout << iv[i] << ' ';
 	cout << endl;
 }
+/**
+ * 基本算法
+ */
+#include "y_algobase.h"
+#include <algorithm>
+void test_algobase() {
+	int ia[9] = { 0,1,2,3,4,5,6,7,8 };
+	vector<int> iv1(ia, ia + 5);
+	vector<int> iv2(ia, ia + 9);
+	//cout << *(mismatch(iv1.begin(), iv1.end(), iv2.begin()).first) << endl;
+	cout << *(mismatch(iv1.begin(), iv1.end(), iv2.begin()).second) << endl;//判断两个区间的第一个不匹配点（实际操作应加上是否为end()判断）
+	cout << equal(iv1.begin(), iv1.end(), iv2.begin()) << endl;//判断区间内是否相同，第二序列多出来的元素忽略
+	cout << equal(iv1.begin(), iv1.end(), &ia[3], less<int>())<<endl;//true;{0,1,2,3,4}小于{3,4,5,6,7}
+	fill(iv1.begin(), iv1.end(), 9);//将iv1填充9
+	for_each(iv1.begin(), iv1.end(), display<int>());//display为仿函数，输出元素；9 9 9 9 9
+	cout << endl;
+	fill_n(iv1.begin(), 3, 7);//从迭代器指定位置，填写3个7
+	for_each(iv1.begin(), iv1.end(), display<int>());//for_each为遍历算法；7 7 7 9 9
+	cout << endl;
+	vector<int>::iterator ite1 = iv1.begin();//指向7
+	vector<int>::iterator ite2 = ite1;
+	advance(ite2, 3);//指向9
+	iter_swap(ite1, ite2);//交换两迭代器所指元素
+	for_each(iv1.begin(), iv1.end(), display<int>());//9 7 7 7 9
+	cout << endl;
+	cout << max(*ite1, *ite2) << endl;//9(*ite1)
+	cout << min(*ite1, *ite2) << endl;//7(*ite2)
+	swap(*iv1.begin(), *iv2.begin());//交换两数值
+	for_each(iv1.begin(), iv1.end(), display<int>());//0 7 7 7 9
+	cout << endl;
+	for_each(iv2.begin(), iv2.end(), display<int>());//0 1 2 3 4 5 6 7 8
+	cout << endl;
+	string str1[] = { "Yshen" };
+	string str2[] = { "yshen" };
+	cout << lexicographical_compare(str1, str1 + 1, str2, str2 + 1/* ,greater<string>() */) << endl;//1；比较字符串，大写字母更小，所以返回真
+}
 
 int main()
 {
-	test_numeric();
+	//test_numeric();
+	test_algobase();
 }
 

@@ -23,5 +23,8 @@
     <ClInclude Include="y_numeric.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="y_algobase.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
