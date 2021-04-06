@@ -144,6 +144,7 @@
   <ItemGroup>
     <ClInclude Include="y_algobase.h" />
     <ClInclude Include="y_numeric.h" />
+    <ClInclude Include="y_set_algo.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

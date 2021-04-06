@@ -80,7 +80,7 @@ void test_algobase() {
 	//cout << *(mismatch(iv1.begin(), iv1.end(), iv2.begin()).first) << endl;
 	cout << *(mismatch(iv1.begin(), iv1.end(), iv2.begin()).second) << endl;//判断两个区间的第一个不匹配点（实际操作应加上是否为end()判断）
 	cout << equal(iv1.begin(), iv1.end(), iv2.begin()) << endl;//判断区间内是否相同，第二序列多出来的元素忽略
-	cout << equal(iv1.begin(), iv1.end(), &ia[3], less<int>())<<endl;//true;{0,1,2,3,4}小于{3,4,5,6,7}
+	cout << equal(iv1.begin(), iv1.end(), &ia[3], less<int>()) << endl;//true;{0,1,2,3,4}小于{3,4,5,6,7}
 	fill(iv1.begin(), iv1.end(), 9);//将iv1填充9
 	for_each(iv1.begin(), iv1.end(), display<int>());//display为仿函数，输出元素；9 9 9 9 9
 	cout << endl;
@@ -104,10 +104,46 @@ void test_algobase() {
 	string str2[] = { "yshen" };
 	cout << lexicographical_compare(str1, str1 + 1, str2, str2 + 1/* ,greater<string>() */) << endl;//1；比较字符串，大写字母更小，所以返回真
 }
+/**
+ * set相关算法
+ * 接受有序区间的set或multiset
+ * hashtable为底层机制的容器因元素并未呈现排序状态，所以不适配这些算法
+ */
+#include "y_set_algo.h"
+#include <set>
+void test_set_algo() {
+	int ia1[6] = { 1,3,5,7,9,11 };
+	int ia2[7] = { 1,1,2,3,5,8,13 };
+	multiset<int> S1(ia1, ia1 + 6);
+	multiset<int> S2(ia2, ia2 + 7);
+	multiset<int>::iterator first1 = S1.begin();
+	multiset<int>::iterator last1 = S1.end();
+	multiset<int>::iterator first2 = S2.begin();
+	multiset<int>::iterator last2 = S2.end();
+	cout << "Union of S1 and S2:";
+	set_union(first1, last1, first2, last2, ostream_iterator<int>(cout, " "));
+	cout << endl;
+	first1 = S1.begin();
+	first2 = S2.begin();
+	cout << "Intersection of S1 and S2:";
+	set_intersection(first1, last1, first2, last2, ostream_iterator<int>(cout, " "));
+	cout << endl;
+	first1 = S1.begin();
+	first2 = S2.begin();
+	cout << "Difference of S1 and S2 (S1-S2):";
+	set_difference(first1, last1, first2, last2, ostream_iterator<int>(cout, " "));
+	cout << endl;
+	first1 = S1.begin();
+	first2 = S2.begin();
+	cout << "Symmetric difference of S1 and S2:";
+	set_symmetric_difference(first1, last1, first2, last2, ostream_iterator<int>(cout, " "));
+	cout << endl;
+}
 
 int main()
 {
 	//test_numeric();
-	test_algobase();
+	//test_algobase();
+	test_set_algo();
 }
 
