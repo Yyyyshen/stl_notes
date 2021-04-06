@@ -145,6 +145,14 @@ void test_set_algo() {
 void test_heap_algo() {
 	//第四章实现heap时已经看过，略
 }
+/**
+ * 其他算法
+ */
+#include "y_algorithm_1.h"
+#include "y_algorithm_2.h"
+void test_algorithm() {
+
+}
 
 int main()
 {

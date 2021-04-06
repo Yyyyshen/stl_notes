@@ -29,5 +29,11 @@
     <ClInclude Include="y_set_algo.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="y_algorithm_1.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="y_algorithm_2.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
