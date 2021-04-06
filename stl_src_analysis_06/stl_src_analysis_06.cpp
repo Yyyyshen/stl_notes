@@ -139,6 +139,12 @@ void test_set_algo() {
 	set_symmetric_difference(first1, last1, first2, last2, ostream_iterator<int>(cout, " "));
 	cout << endl;
 }
+/**
+ * heap相关算法
+ */
+void test_heap_algo() {
+	//第四章实现heap时已经看过，略
+}
 
 int main()
 {
