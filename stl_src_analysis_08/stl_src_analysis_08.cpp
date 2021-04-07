@@ -21,6 +21,12 @@ using namespace std;
 void test_adapter() {
 
 }
+/**
+ * container adapters
+ */
+void test_container_adapter() {
+	//在前面容器章节实现过，略
+}
 
 int main()
 {
