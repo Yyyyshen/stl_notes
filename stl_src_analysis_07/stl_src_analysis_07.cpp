@@ -139,6 +139,34 @@ template<class T>
 struct y_logical_not :public y_unary_function<T, bool> {
 	bool operator()(const T& x, const T& y) const { return !x; }
 };
+/**
+ * stl容器常用
+ * identity
+ * select
+ * project
+ */
+template<class T>
+struct y_identity :public y_unary_function<T, T> {
+	//set中键值和实值相等，所以采用此函数
+	const T& operator() (const T& x) const { return x; }
+};
+template<class Pair>
+struct y_select1st :public y_unary_function<Pair, typename Pair::first_type> {
+	//map中以pair的第一元素为键值，所以采用此函数
+	const typename Pair::first_type& operator() (const Pair& x) const { return x.first; }
+	//传回第二元素同理 return x.second;
+};
+template<class Arg1, class Arg2>
+struct y_project1st :public y_binary_function<Arg1, Arg2, Arg1> {
+	//忽略第二参数，传回第一参数，还没见过使用
+	Arg1 operator() (const Arg1& x, const Arg2&) const { return x; }
+};
+template<class Arg1, class Arg2>
+struct y_project2nd :public y_binary_function<Arg1, Arg2, Arg2> {
+	//忽略第一参数，传回第二参数，还没见过使用
+	Arg2 operator() (const Arg1&, const Arg2& y) const { return y; }
+};
+
 
 int main()
 {
