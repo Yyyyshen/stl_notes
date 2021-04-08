@@ -23,5 +23,8 @@
     <ClInclude Include="y_iterator_adapters.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="y_function_adapters.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

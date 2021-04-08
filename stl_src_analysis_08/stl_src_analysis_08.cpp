@@ -2,7 +2,9 @@
 //
 
 #include <iostream>
-
+#include <algorithm>
+#include <vector>
+#include <functional>
 /**
  * 适配器
  */
@@ -32,6 +34,13 @@ void test_container_adapter() {
  */
 #include "y_iterator_adapters.h"
 void test_iterator_adapter() {
+
+}
+/**
+ * function adapters
+ */
+#include "y_function_adapters.h"
+void test_function_adapter() {
 
 }
 

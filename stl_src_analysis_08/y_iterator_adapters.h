@@ -217,7 +217,7 @@ public:
 
 	y_ostream_iterator<T>& operator=(const T& value) {
 		*stream << value;
-		if (string) *steam << string;
+		if (string) *stream << string;
 		return *this;
 	}
 
