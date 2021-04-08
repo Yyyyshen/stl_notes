@@ -27,6 +27,13 @@ void test_adapter() {
 void test_container_adapter() {
 	//在前面容器章节实现过，略
 }
+/**
+ * iterator adapters
+ */
+#include "y_iterator_adapters.h"
+void test_iterator_adapter() {
+
+}
 
 int main()
 {
